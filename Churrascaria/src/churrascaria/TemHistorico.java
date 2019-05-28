@@ -1,5 +1,7 @@
 package churrascaria;
 
+import java.util.ArrayList;
+
 public interface TemHistorico {
-    String getHistorico();
+    ArrayList<Mesa> getHistorico(Banco db);
 }

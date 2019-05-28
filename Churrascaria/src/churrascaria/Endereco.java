@@ -1,7 +1,7 @@
 package churrascaria;
 
 public class Endereco {
-    private String cidade, rua, bairro, cep;
+    private String rua, bairro, cidade, cep;
 
     public String getCidade() {
         return cidade;

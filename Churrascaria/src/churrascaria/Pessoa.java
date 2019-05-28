@@ -1,18 +1,14 @@
 package churrascaria;
 
-import java.util.ArrayList;
-
 public abstract class Pessoa {
-    private int codigo;
-    private String nome, cpf;
-    private Endereco endereco;
-    private ArrayList<Venda> historico;
-
-    public int getCodigo() {
+    private String codigo, nome, cpf;
+    private Endereco endereco = new Endereco();
+    
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
