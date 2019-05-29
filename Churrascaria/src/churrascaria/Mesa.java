@@ -17,6 +17,13 @@ public class Mesa {
         this.cliente = new Cliente();
         this.funcionario = new Funcionario();
     }
+    
+    public Mesa(String codigo, Cliente cliente, Funcionario funcionario){
+        this.ativa = true;
+        this.cliente = cliente;
+        this.funcionario = funcionario;
+        this.produtos = new ArrayList();
+    }
 
     public boolean isAtiva() {
         return ativa;
