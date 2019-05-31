@@ -55,7 +55,7 @@ public class GUIFuncionarios extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable4 = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         Novo.setText("Novo");
         Novo.addActionListener(new java.awt.event.ActionListener() {
@@ -86,14 +86,14 @@ public class GUIFuncionarios extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Nome", "CPF", "", "Data de Contratação", "Rua", "Bairro", "Cidade", "CEP"
+                "Código", "Nome", "CPF", "Salário", "Data de Contratação", "Rua", "Bairro", "Cidade", "CEP"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {

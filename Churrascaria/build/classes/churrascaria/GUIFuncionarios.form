@@ -2,7 +2,7 @@
 
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -94,7 +94,7 @@
                 <Column editable="false" title="C&#xf3;digo" type="java.lang.Integer"/>
                 <Column editable="false" title="Nome" type="java.lang.String"/>
                 <Column editable="false" title="CPF" type="java.lang.String"/>
-                <Column editable="true" title="" type="java.lang.Float"/>
+                <Column editable="false" title="Sal&#xe1;rio" type="java.lang.Float"/>
                 <Column editable="false" title="Data de Contrata&#xe7;&#xe3;o" type="java.lang.String"/>
                 <Column editable="false" title="Rua" type="java.lang.String"/>
                 <Column editable="false" title="Bairro" type="java.lang.String"/>

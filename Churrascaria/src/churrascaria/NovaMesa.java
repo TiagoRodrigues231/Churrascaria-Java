@@ -45,7 +45,7 @@ public class NovaMesa extends javax.swing.JFrame {
         buttonSalvar = new javax.swing.JButton();
         buttonCancel = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Nova Mesa");
         setResizable(false);
 
