@@ -25,14 +25,22 @@ public class GUIMesas extends javax.swing.JFrame {
 
         for (int linha = 0; linha < mesas.size(); linha++) {
             Mesa mesa = mesas.get(linha);
+            String produtos = "";
+            if(mesa.getProdutos().size() > 0) {
+                ProdutoNaMesa[] listaProdutos = mesa.getProdutos().toArray(new ProdutoNaMesa[mesa.getProdutos().size()]);
+                produtos += Integer.toString(listaProdutos[0].getCodigo());
+                for(int i=1;i<listaProdutos.length;i++) produtos+= "," + listaProdutos[i].getCodigo();
+            }
+            
 
             tTabela.addRow(new Object[]{1});
 
             jTable1.setValueAt(mesa.getCodigo(), linha, 0);
             jTable1.setValueAt(mesa.getCliente().getCodigo(), linha, 1);
-            jTable1.setValueAt(mesa.getValor(), linha, 2);
-            jTable1.setValueAt(mesa.getFuncionario().getCodigo(), linha, 3);
-            jTable1.setValueAt(mesa.isAtiva(), linha, 4);
+            jTable1.setValueAt(produtos, linha, 2);
+            jTable1.setValueAt(mesa.getValor(), linha, 3);
+            jTable1.setValueAt(mesa.getFuncionario().getCodigo(), linha, 4);
+            jTable1.setValueAt(mesa.isAtiva(), linha, 5);
         }
 
     }
@@ -77,20 +85,20 @@ public class GUIMesas extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Cliente", "Valor", "Funcionário", "Ativa"
+                "Código", "Cliente", "Produtos", "Valor", "Funcionário", "Ativa"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Float.class, java.lang.Integer.class, java.lang.Boolean.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.Float.class, java.lang.Integer.class, java.lang.Boolean.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -110,7 +118,7 @@ public class GUIMesas extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Novo)
                         .addGap(90, 90, 90)
