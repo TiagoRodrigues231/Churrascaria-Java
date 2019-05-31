@@ -1,12 +1,9 @@
 package churrascaria;
 
-import java.util.ArrayList;
-
 public abstract class Pessoa {
     private int codigo;
     private String nome, cpf;
-    private Endereco endereco;
-    private ArrayList<Venda> historico;
+    private Endereco endereco = new Endereco();
 
     public int getCodigo() {
         return codigo;
@@ -15,7 +12,7 @@ public abstract class Pessoa {
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
-
+    
     public String getNome() {
         return nome;
     }
