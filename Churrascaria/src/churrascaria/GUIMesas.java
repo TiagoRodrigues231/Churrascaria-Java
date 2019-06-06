@@ -27,9 +27,11 @@ public class GUIMesas extends javax.swing.JFrame {
             Mesa mesa = mesas.get(linha);
             String produtos = "";
             if(mesa.getProdutos().size() > 0) {
-                ProdutoNaMesa[] listaProdutos = mesa.getProdutos().toArray(new ProdutoNaMesa[mesa.getProdutos().size()]);
-                produtos += Integer.toString(listaProdutos[0].getCodigo());
-                for(int i=1;i<listaProdutos.length;i++) produtos+= "," + listaProdutos[i].getCodigo();
+                ArrayList<ProdutoNaMesa> listaProdutos = mesa.getProdutos();
+                produtos += Integer.toString(listaProdutos.get(0).getCodigo());
+                if(listaProdutos.size() > 1) {
+                    for(int i=1;i<listaProdutos.size();i++) produtos+= "," + Integer.toString(listaProdutos.get(i).getCodigo());
+                }
             }
             
 

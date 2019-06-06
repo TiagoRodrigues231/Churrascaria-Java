@@ -219,7 +219,6 @@ public class AlterarMesa extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
     private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
-    int codigo = Banco.getMesas().size();
     Cliente cliente = Banco.getClientes().get(Integer.parseInt(inputCliente.getText()));
     Funcionario funcionario = Banco.getFuncionarios().get(Integer.parseInt(inputFuncionario.getText()));
     
@@ -227,26 +226,24 @@ public class AlterarMesa extends javax.swing.JFrame {
     int i = 0;
     
     if (!inputProduto1.getText().equals("")) {
-        produtos.add(new ProdutoNaMesa(Banco.getProdutos().get(Integer.parseInt(inputProduto1.getText())), Integer.parseInt(jComboBox1.getSelectedItem().toString())));
+        produtos.add(new ProdutoNaMesa(Integer.parseInt(inputProduto1.getText()), Integer.parseInt(jComboBox1.getSelectedItem().toString())));
         i++;
     }
         
     if (!inputProduto2.getText().equals("")) {
-        produtos.add(new ProdutoNaMesa(Banco.getProdutos().get(Integer.parseInt(inputProduto2.getText())), Integer.parseInt(jComboBox2.getSelectedItem().toString())));
+        produtos.add(new ProdutoNaMesa(Integer.parseInt(inputProduto2.getText()), Integer.parseInt(jComboBox2.getSelectedItem().toString())));
         i++;
     }
     
     if (!inputProduto3.getText().equals("")) {
-        produtos.add(new ProdutoNaMesa(Banco.getProdutos().get(Integer.parseInt(inputProduto3.getText())), Integer.parseInt(jComboBox3.getSelectedItem().toString())));
+        produtos.add(new ProdutoNaMesa(Integer.parseInt(inputProduto3.getText()), Integer.parseInt(jComboBox3.getSelectedItem().toString())));
         i++;
     }
     
     if (!inputProduto4.getText().equals("")) {
-        produtos.add(new ProdutoNaMesa(Banco.getProdutos().get(Integer.parseInt(inputProduto4.getText())), Integer.parseInt(jComboBox4.getSelectedItem().toString())));
+        produtos.add(new ProdutoNaMesa(Integer.parseInt(inputProduto4.getText()), Integer.parseInt(jComboBox4.getSelectedItem().toString())));
         i++;
     }
-    
-    ProdutoNaMesa[] produtosArray = produtos.toArray(new ProdutoNaMesa[i]);
     
     Mesa mesa = new Mesa(cliente, funcionario, produtos);
 

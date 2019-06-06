@@ -30,6 +30,7 @@ public class Mesa {
     
     public Mesa (Cliente cliente, Funcionario funcionario, ArrayList<ProdutoNaMesa> produtos) {
         this.ativa = true;
+        this.codigo = Banco.getMesas().size();
         this.cliente = cliente;
         this.funcionario = funcionario;
         this.setProdutos(produtos);

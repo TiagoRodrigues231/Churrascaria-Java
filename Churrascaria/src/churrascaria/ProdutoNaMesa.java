@@ -8,8 +8,11 @@ public class ProdutoNaMesa extends Produto {
         this.quantidade = 0;
     }
     
-    public ProdutoNaMesa (Produto produto, int quantidade) {
-        super(produto.getNome(), produto.getValor());
+    public ProdutoNaMesa (int produto, int quantidade) {
+        Produto produtoOriginal = Banco.getProdutos().get(produto);
+        this.setCodigo(produtoOriginal.getCodigo());
+        this.setNome(produtoOriginal.getNome());
+        this.setValor(produtoOriginal.getValor());
         this.quantidade = quantidade;
     }
     
